@@ -17,7 +17,7 @@ name: Run it on action
 on:
   push:
     branches:
-      - master
+      - dev
   schedule:
     - cron: 00 02 * * *
 jobs:
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-18.04
     name: Run it on action
     steps:
-      - name: Checkout master
+      - name: Checkout dev
         uses: actions/checkout@v2
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
